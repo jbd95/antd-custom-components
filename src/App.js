@@ -10,6 +10,7 @@ import { BrowserRouter, Switch, Route} from 'react-router-dom';
 import PictureButton from './components/PictureButton';
 import logo from './images/logo192.png';
 import PaypalCheckout from './components/PaypalCheckout';
+import UserMenu from './components/UserMenu';
 
 const { Content } = Layout;
 const { Title } = Typography;
@@ -33,6 +34,9 @@ function App() {
             </ComponentDetails>
             <ComponentDetails name='Paypal Checkout' description='Adds a paypal checkout button. Needs a paypal client id and secret for real payment processing. Alerts the user with antd messages when the transaction is successful or canceled.' location='/components/PaypalCheckout.js'>
                 <PaypalCheckout clientid='sb' currency='USD' amount='149.99' completeURL={null} verifyShippingAddres={null} style={{maxWidth: '100px'}}/>
+            </ComponentDetails>
+            <ComponentDetails name='User Menu' description='Allow user to have access to profile settings.' location='/components/UserMenu.js'>
+                <UserMenu icon='github' signOutLink={'/signout'} onSignOut={() => console.log('signing out')} title='username' trigger={['click']}  placement='bottomLeft'/>
             </ComponentDetails>
           </BrowserRouter>
       </Content>
