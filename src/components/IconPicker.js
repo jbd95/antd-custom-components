@@ -12,9 +12,9 @@ class IconPicker extends React.Component {
         this.setState({
             selected: type
         })
-        if(this.props.selected)
+        if(this.props.onSelect)
         {
-            this.props.selected(type);
+            this.props.onSelect(type);
         }
     }
 
@@ -41,7 +41,7 @@ class IconPicker extends React.Component {
     render() {
         return (
             <Popover placement={this.props.placement} title={this.renderTitle()} content={this.getAllIcons()} trigger='click'>
-                <Button size='large'>
+                <Button size={this.props.size} style={this.props.style} className={this.props.className}>
                     <div>
                         <div>
                             <Icon type={this.state.selected}/>
