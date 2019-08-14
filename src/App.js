@@ -3,6 +3,7 @@ import 'antd/dist/antd.css';
 import './App.css';
 import { Layout, Typography, Col, Row, Divider } from 'antd';
 import IconPicker from './components/IconPicker';
+import IconPickerAPI from './data/IconPickerAPI';
 import DropdownMenu from './components/DropdownMenu';
 import ComponentDetails from './components/ComponentDetails';
 import { BrowserRouter, Switch, Route} from 'react-router-dom';
@@ -18,7 +19,7 @@ function App() {
     <Layout className='layout'>
       <Content>
         <BrowserRouter>
-            <ComponentDetails name='Icon Picker' description='Allow the user to choose an icon' location='/components/IconPicker.js'>
+            <ComponentDetails name='Icon Picker' description='Allow the user to choose an icon' location='/components/IconPicker.js' data={IconPickerAPI}>
               <IconPicker availableIcons={['windows', 'apple', 'android']} default='windows' placement='bottomLeft' size='default' onSelect={(icon) => console.log(`${icon} selected`)}/>
             </ComponentDetails>
             <ComponentDetails name='Dropdown Menu' description='Hoverable navigation menu' location='/components/DropdownMenu.js'>
