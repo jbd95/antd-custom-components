@@ -1,25 +1,15 @@
 import React from 'react';
-import { Avatar, Popover, Button, Menu, Row, Icon } from 'antd';
+import { Avatar, Popover, Button, Menu, Row, Icon, Divider } from 'antd';
 
 class UserMenu extends React.Component {
 
     renderPopover = () => (
         <div>
             <Menu>
-                <Menu.Item> 
-                <   Row type='flex' align='middle'>
-                        <Icon type='idcard'/>
-                        Profile
-                    </Row>
-                    <Row type='flex' align='middle'>
-                        <Icon type='github'/>
-                        First
-                    </Row>
-                </Menu.Item>
-                    
+                {this.props.children}
             </Menu>
             <Button style={{width: '100%'}} type='primary' href={this.props.signOutLink} onClick={this.props.onSignOut}> Sign out </Button>
-            </div>
+        </div>
     )
 
     render() {

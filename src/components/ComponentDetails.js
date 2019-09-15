@@ -13,12 +13,16 @@ class ComponentDetails extends React.Component {
                 <Title level={3}> {this.props.name} </Title>
                 {this.props.children}
                 <Row type='flex' align='middle' style={{marginTop: '8px'}}>
-                    <Icon type='info-circle' style={{paddingRight: '8px'}}/>
-                    {this.props.description}
+                    <div>
+                        <Icon type='info-circle' style={{paddingRight: '8px'}}/>
+                        {this.props.description}
+                    </div>
                 </Row>
                 <Row type='flex' align='middle' style={{marginTop: '8px'}}>
-                    <Icon type='file' style={{paddingRight: '8px'}}/>
-                    {this.props.location}
+                    <div>
+                        <Icon type='file' style={{paddingRight: '8px'}}/>
+                        {this.props.location}
+                    </div>
                 </Row>
                 <Collapse style={{margin: '16px'}}>
                     <Panel key='0' header={`${this.props.name} API`}>
