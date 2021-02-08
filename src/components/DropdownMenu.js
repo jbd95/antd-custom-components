@@ -9,7 +9,7 @@ class DropdownMenu extends React.Component {
             {(this.props.items) ? this.props.items.map((element, i) => (
                     <Menu.Item key={`element-${i}`}>
                         <Link to={element.href}>
-                            <Row type='flex'>
+                            <Row type='flex' align='middle'>
                                 {(element.icon) ? <Icon type={element.icon} style={{paddingRight: '8px'}}/> : null}
                                 {element.text}
                             </Row>
