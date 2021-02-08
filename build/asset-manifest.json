@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/antd-custom-components/static/css/main.2cce8147.chunk.css",
+    "main.js": "/antd-custom-components/static/js/main.17e656c5.chunk.js",
+    "main.js.map": "/antd-custom-components/static/js/main.17e656c5.chunk.js.map",
+    "runtime~main.js": "/antd-custom-components/static/js/runtime~main.827196a7.js",
+    "runtime~main.js.map": "/antd-custom-components/static/js/runtime~main.827196a7.js.map",
+    "static/css/2.93e9ecf4.chunk.css": "/antd-custom-components/static/css/2.93e9ecf4.chunk.css",
+    "static/js/2.4d074af4.chunk.js": "/antd-custom-components/static/js/2.4d074af4.chunk.js",
+    "static/js/2.4d074af4.chunk.js.map": "/antd-custom-components/static/js/2.4d074af4.chunk.js.map",
+    "index.html": "/antd-custom-components/index.html",
+    "precache-manifest.7479d4e809cf5de949e5760ad03b0883.js": "/antd-custom-components/precache-manifest.7479d4e809cf5de949e5760ad03b0883.js",
+    "service-worker.js": "/antd-custom-components/service-worker.js",
+    "static/css/2.93e9ecf4.chunk.css.map": "/antd-custom-components/static/css/2.93e9ecf4.chunk.css.map",
+    "static/css/main.2cce8147.chunk.css.map": "/antd-custom-components/static/css/main.2cce8147.chunk.css.map"
+  }
+}
