@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dropdown, Menu, Icon, Button, Row } from 'antd';
+import { Dropdown, Menu, Icon, Button, Row, Col } from 'antd';
 import { Link } from 'react-router-dom';
 
 class DropdownMenu extends React.Component {

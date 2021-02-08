@@ -1,7 +1,7 @@
 import React from 'react';
 import 'antd/dist/antd.css';
 import './App.css';
-import { Layout, Typography, Col, Row, Divider } from 'antd';
+import { Layout, Typography, Col, Row, Divider, Icon, Menu } from 'antd';
 import IconPicker from './components/IconPicker';
 import IconPickerAPI from './data/IconPickerAPI';
 import DropdownMenu from './components/DropdownMenu';
@@ -10,6 +10,7 @@ import { BrowserRouter, Switch, Route} from 'react-router-dom';
 import PictureButton from './components/PictureButton';
 import logo from './images/logo192.png';
 import PaypalCheckout from './components/PaypalCheckout';
+import UserMenu from './components/UserMenu';
 
 const { Content } = Layout;
 const { Title } = Typography;
@@ -30,6 +31,28 @@ function App() {
                 <PictureButton style={{margin: '4px'}}icon='github' size='small' minWidth={500} text='profile' href='https://github.com' onClick={() => console.log('clicked')}/>
                 <div style={{maxWidth: '150px'}}> <Divider style={{margin: '2px'}}/> </div>
                 <PictureButton style={{margin: '4px'}} image={logo} size='default' minWidth={500} text='React' href='https://reactjs.org/' onClick={() => console.log('clicked')}/>
+            </ComponentDetails>
+            <ComponentDetails name='User Menu' description='Allow user to have access to profile settings.' location='/components/UserMenu.js'>
+  <UserMenu icon='github' signOutLink={'/signout'} onSignOut={() => console.log('signing out')} name="" trigger={['click']}  placement='bottomLeft'>
+                <Menu.Item> 
+                  <Row type='flex' align='middle'>
+                      <Icon type='user'/>
+                      Profile
+                  </Row>  
+                </Menu.Item>
+                <Menu.Item> 
+                    <Row type='flex' align='middle'>
+                        <Icon type='message'/>
+                        Messages
+                    </Row>
+                </Menu.Item>
+                <Menu.Item> 
+                    <Row type='flex' align='middle'>
+                        <Icon type='setting'/>
+                        Settings
+                    </Row>
+                </Menu.Item>
+                </UserMenu>
             </ComponentDetails>
             <ComponentDetails name='Paypal Checkout' description='Adds a paypal checkout button. Needs a paypal client id and secret for real payment processing. Alerts the user with antd messages when the transaction is successful or canceled.' location='/components/PaypalCheckout.js'>
                 <PaypalCheckout clientid='sb' currency='USD' amount='149.99' completeURL={null} verifyShippingAddres={null} style={{maxWidth: '100px'}}/>
